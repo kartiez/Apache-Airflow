@@ -26,14 +26,20 @@ export AIRFLOW_HOME=`pwd` airflow_home
 ```
 ### 4. Create Database
 
-```airflow initdb```
+```
+airflow initdb
+```
 
 ### 5. Upload the script.py file to the machine
 
 ### 6. Start Airflow Service
-```airflow webserver```
+```
+airflow webserver
+```
 
 ### 7. Start Scheduler
-```airflow scheduler```
+```
+airflow scheduler
+```
 
-##Completed
+## Completed
