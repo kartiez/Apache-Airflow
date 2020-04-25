@@ -44,20 +44,25 @@ dag = DAG(
     description='Test DAG',
     schedule_interval=timedelta(minutes=1),
 )
+
+# YOUR FIRST TASK GOES HERE
+
 t1 = PythonOperator(
     task_id='t1',
     depends_on_past=False,
     python_callable=firstfunction,
-    #op_kwargs={'url': "http://rss.cnn.com/rss/cnn_topstories.rss"},
+    #op_kwargs={ SPECIFY ARGUMENTS HERE },
     # retries=3,
     dag=dag,
 )
+
+# YOUR SECOND TASK GOES HERE
 
 t2 = PythonOperator(
     task_id='t2',
     depends_on_past=False,
     python_callable=secondfunction,
-    #op_kwargs={'url': "http://feeds.foxnews.com/foxnews/latest"},
+    #op_kwargs={'SPECIFY ARGUMENTS HERE},
     # retries=3,
     dag=dag,
 )
