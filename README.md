@@ -31,9 +31,11 @@ airflow initdb
 
 ### 5. Upload the script.py file to the machine
 
-In the code, the tasks t1,t1 are executed parallely 
+In the code, the tasks t1 and t2 are executed simultaneously.
 
-If you want to execute t2 after t1 then add the below piece of code to the bottom of the file.
+
+If you want to execute t2 after t1 then add the below piece of code to the bottom of the python file.
+
 ```
 t1.set_upstream(t2) #
 ```
