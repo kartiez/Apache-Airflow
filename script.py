@@ -1,10 +1,7 @@
-import feedparser
 from airflow import DAG
 # Operators; we need this to operate!
-from airflow.operators.bash_operator import BashOperator
 from airflow.operators.python_operator import PythonOperator
 from airflow.utils.dates import days_ago
-from textblob import TextBlob as tb
 import re
 from datetime import timedelta
 
